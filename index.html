@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athithya T | Full Stack & AI Developer</title>
+  <meta name="description" content="Portfolio of Athithya T - Computer Science Engineering Undergrad, Full-Stack Web Developer & AI Enthusiast.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Custom Cursor Glow Follower -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;A/&gt;</span>
+        <span class="logo-text">Athithya<span class="accent-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#experience" class="nav-item">Journey</a></li>
+        <li><a href="#achievements" class="nav-item">Achievements</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark"></i>
+          <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill animate-fade-in">
+            <span class="status-dot"></span>
+            <span>Available for Internships & Opportunities</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in delay-1">
+            Hi, I'm <span class="gradient-text">Athithya T</span>
+          </h1>
+
+          <div class="typewriter-container animate-fade-in delay-2">
+            <span class="typewriter-prefix">I build</span>
+            <span class="typewriter-text" id="typewriterText"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-bio animate-fade-in delay-3">
+            Computer Science Engineering undergrad at <strong>M. Kumarasamy College of Engineering</strong>. 
+            Passionate about architecting end-to-end full stack web platforms, crafting computer vision & LLM-powered 
+            applications, and solving complex algorithmic challenges.
+          </p>
+
+          <div class="hero-cta-group animate-fade-in delay-4">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Explore Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="javascript:void(0)" class="btn btn-outline" id="resumeViewBtn">
+              <i class="fa-solid fa-file-lines"></i> View Resume
+            </a>
+          </div>
+
+          <div class="hero-social-links animate-fade-in delay-5">
+            <a href="https://github.com/Athithyathirugnanam" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:athithyathirugnanam@gmail.com" class="social-icon" title="Email Athithya">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+917708978227" class="social-icon" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <div class="location-badge">
+              <i class="fa-solid fa-location-dot"></i> Tiruppur, Tamil Nadu
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card">
+              <div class="avatar-header">
+                <div class="avatar-dot red"></div>
+                <div class="avatar-dot yellow"></div>
+                <div class="avatar-dot green"></div>
+                <span class="code-badge">athithya.dev</span>
+              </div>
+              
+              <div class="avatar-photo-box">
+                <div class="profile-avatar-fallback">
+                  <span class="avatar-initials">AT</span>
+                  <div class="avatar-meta">
+                    <span class="avatar-name">Athithya T</span>
+                    <span class="avatar-sub">B.E. CSE Undergrad</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="code-snippet-box">
+                <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">engineer</span> = {</div>
+                <div class="code-line indent-1"><span class="c-prop">name:</span> <span class="c-string">'Athithya T'</span>,</div>
+                <div class="code-line indent-1"><span class="c-prop">role:</span> <span class="c-string">'Full-Stack & AI Dev'</span>,</div>
+                <div class="code-line indent-1"><span class="c-prop">hackerRankScore:</span> <span class="c-num">7000</span>,</div>
+                <div class="code-line indent-1"><span class="c-prop">focus:</span> [<span class="c-string">'LLMs'</span>, <span class="c-string">'Web'</span>, <span class="c-string">'Cloud'</span>],</div>
+                <div class="code-line indent-1"><span class="c-prop">readyToInnovate:</span> <span class="c-bool">true</span></div>
+                <div class="code-line">};</div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-python" style="--delay: 0s">
+                <i class="fa-brands fa-python"></i> Python
+              </div>
+              <div class="floating-badge badge-java" style="--delay: 1.5s">
+                <i class="fa-brands fa-java"></i> Java
+              </div>
+              <div class="floating-badge badge-ai" style="--delay: 3s">
+                <i class="fa-solid fa-brain"></i> AI & CV
+              </div>
+              <div class="floating-badge badge-react" style="--delay: 4.5s">
+                <i class="fa-solid fa-code"></i> Full Stack
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counter Strip -->
+      <div class="metrics-bar">
+        <div class="container metrics-grid">
+          <div class="metric-item">
+            <div class="metric-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="metric-info">
+              <div class="metric-num-wrap"><h3 class="counter" data-target="100">0</h3><span class="plus">+</span></div>
+              <p>HackerRank Solved</p>
+            </div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="metric-info">
+              <div class="metric-num-wrap"><h3 class="counter" data-target="7000">0</h3></div>
+              <p>HackerRank Score</p>
+            </div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="metric-info">
+              <div class="metric-num-wrap"><h3>7.5</h3></div>
+              <p>Engineering CGPA</p>
+            </div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <div class="metric-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="metric-info">
+              <div class="metric-num-wrap"><h3 class="counter" data-target="2">0</h3><span class="plus">+</span></div>
+              <p>Hackathons & Appathons</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Areas of Interest Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">DISCOVER</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-desc">
+            Bridging foundational computer science rigor with modern AI and responsive web engineering.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel reveal-on-scroll">
+            <div class="about-lead-icon">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <h3>Who I Am</h3>
+            <p>
+              I am a Computer Science Engineering student (2024–2028) at <strong>M. Kumarasamy College of Engineering</strong> 
+              with a keen curiosity for how software transforms ideas into impactful realities. 
+              My journey spans algorithm optimization, full-stack web applications, and state-of-the-art AI systems involving 
+              computer vision and speech analysis.
+            </p>
+            <p>
+              Whether deciphering complex LeetCode problems or integrating large language models with real-time OpenCV streams, 
+              I value clean architecture, scalable code, and delightful user experiences.
+            </p>
+
+            <div class="about-quick-specs">
+              <div class="spec-row">
+                <span class="spec-label"><i class="fa-solid fa-location-arrow"></i> Based In:</span>
+                <span class="spec-value">Tiruppur, Tamil Nadu, India</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label"><i class="fa-solid fa-language"></i> Languages:</span>
+                <span class="spec-value">English, Tamil</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label"><i class="fa-solid fa-briefcase"></i> Experience:</span>
+                <span class="spec-value">Full-Stack Intern @ Kanavu Startup Village</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                <span class="spec-value">athithyathirugnanam@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="interests-container">
+            <h3 class="interests-heading reveal-on-scroll">Areas of Specialization</h3>
+            <div class="interests-grid">
+              <div class="interest-card glass-panel reveal-on-scroll">
+                <div class="interest-icon icon-cyan">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h4>Full Stack Web Development</h4>
+                <p>Architecting responsive, high-performance web applications with modular frontend layouts and reliable backends.</p>
+              </div>
+
+              <div class="interest-card glass-panel reveal-on-scroll delay-1">
+                <div class="interest-icon icon-violet">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <h4>AI & Machine Learning</h4>
+                <p>Building intelligent systems utilizing LLMs, OpenCV, Whisper audio transcription, and MediaPipe landmark tracking.</p>
+              </div>
+
+              <div class="interest-card glass-panel reveal-on-scroll delay-2">
+                <div class="interest-icon icon-emerald">
+                  <i class="fa-solid fa-cloud"></i>
+                </div>
+                <h4>Cloud Computing</h4>
+                <p>Deploying resilient, cloud-native services with NPTEL certification in scalable distributed cloud systems.</p>
+              </div>
+
+              <div class="interest-card glass-panel reveal-on-scroll delay-3">
+                <div class="interest-icon icon-amber">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h4>App Development</h4>
+                <p>Crafting intuitive user interfaces and cross-platform native software with focus on Human-Computer Interaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">TECHNICAL EXPERTISE</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-desc">
+            A comprehensive overview of programming languages, libraries, frameworks, and professional competencies.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="skill-filters reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="languages">Languages</button>
+          <button class="filter-btn" data-filter="ai-data">AI & Libraries</button>
+          <button class="filter-btn" data-filter="web">Web & Cloud</button>
+          <button class="filter-btn" data-filter="soft">Professional Skills</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Python -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-python"><i class="fa-brands fa-python"></i></div>
+              <div class="skill-level-badge">Advanced</div>
+            </div>
+            <h4>Python</h4>
+            <p>Data processing, AI models, Flask backends, MediaPipe & OpenCV automation.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="92"></div></div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-java"><i class="fa-brands fa-java"></i></div>
+              <div class="skill-level-badge">HackerRank Certified</div>
+            </div>
+            <h4>Java</h4>
+            <p>Object-oriented systems, application development, core algorithms & data structures.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+          </div>
+
+          <!-- C Language -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-c"><i class="fa-solid fa-c"></i></div>
+              <div class="skill-level-badge">Proficient</div>
+            </div>
+            <h4>C Programming</h4>
+            <p>Low-level memory management, pointers, system foundations, problem solving.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="82"></div></div>
+          </div>
+
+          <!-- HTML5 & CSS3 -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-html"><i class="fa-brands fa-html5"></i></div>
+              <div class="skill-level-badge">Mastery</div>
+            </div>
+            <h4>HTML5 & CSS3</h4>
+            <p>Semantic markup, modern CSS grid/flexbox, responsive layouts & animations.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+          </div>
+
+          <!-- Flask & Backend -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-flask"><i class="fa-solid fa-server"></i></div>
+              <div class="skill-level-badge">Experienced</div>
+            </div>
+            <h4>Flask REST APIs</h4>
+            <p>Lightweight Python microservices, routing, API orchestration, and AI model serving.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+          </div>
+
+          <!-- LLM Integration -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="ai-data">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-ai"><i class="fa-solid fa-microchip"></i></div>
+              <div class="skill-level-badge">Applied AI</div>
+            </div>
+            <h4>LLMs & Prompt Engineering</h4>
+            <p>Semantic text analysis, automated evaluation, concept distillation & reasoning pipelines.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="86"></div></div>
+          </div>
+
+          <!-- OpenCV & MediaPipe -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="ai-data">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-cv"><i class="fa-solid fa-eye"></i></div>
+              <div class="skill-level-badge">Computer Vision</div>
+            </div>
+            <h4>OpenCV & MediaPipe</h4>
+            <p>Real-time video feed analysis, facial landmark detection, gesture tracking.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="84"></div></div>
+          </div>
+
+          <!-- Whisper & Audio -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="ai-data">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-whisper"><i class="fa-solid fa-wave-square"></i></div>
+              <div class="skill-level-badge">Speech AI</div>
+            </div>
+            <h4>OpenAI Whisper & Audio AI</h4>
+            <p>Multi-lingual automatic speech recognition, acoustic telemetry, and student vocal analysis.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+          </div>
+
+          <!-- Pandas & Data -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="ai-data">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-pandas"><i class="fa-solid fa-chart-simple"></i></div>
+              <div class="skill-level-badge">Analytics</div>
+            </div>
+            <h4>Pandas & Data Science</h4>
+            <p>Data transformation, tabular telemetry pipelines, analytical metrics computation.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+          </div>
+
+          <!-- Cloud Computing -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-cloud"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div class="skill-level-badge">NPTEL Certified</div>
+            </div>
+            <h4>Cloud Infrastructure</h4>
+            <p>Cloud deployment architectures, distributed scalability, container basics & virtualization.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+          </div>
+
+          <!-- Teamwork & Leadership -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="soft">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-team"><i class="fa-solid fa-users"></i></div>
+              <div class="skill-level-badge">Core Strength</div>
+            </div>
+            <h4>Teamwork & Collaboration</h4>
+            <p>Effective pair programming, agile team communication, cross-functional project execution.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+          </div>
+
+          <!-- Problem Solving & Quick Learner -->
+          <div class="skill-card glass-panel reveal-on-scroll" data-category="soft">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-learn"><i class="fa-solid fa-bolt"></i></div>
+              <div class="skill-level-badge">Proven</div>
+            </div>
+            <h4>Quick Learner & Time Management</h4>
+            <p>Rapid adaptability to new tech stacks, structured prioritization under hackathon deadlines.</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="96"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">INNOVATIVE CREATIONS</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-desc">
+            Production-grade systems showcasing machine learning integration, computer vision, and interactive web architecture.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel reveal-on-scroll">
+            <div class="project-badge">Flagship AI Project</div>
+            <div class="project-header">
+              <div class="project-icon-box">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="project-role-tag">Lead Developer</div>
+            </div>
+
+            <h3 class="project-title">Student Understanding Verification System</h3>
+            <p class="project-summary">
+              An intelligent multi-modal AI platform designed to evaluate and verify students' conceptual comprehension 
+              in real-time through synthesized speech analysis, semantic evaluations, and behavioral signals.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>LLM Semantic Diagnostics:</strong> Leveraged advanced LLMs to detect subtle student misconceptions and recommend tailored improvement paths.</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Multimodal Signal Fusion:</strong> Integrated OpenCV and MediaPipe for facial & behavioral cues, coupled with Whisper speech-to-text.</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Telemetry & Analytics:</strong> Harnessed Pandas and Flask to aggregate learning metrics into educator actionable dashboards.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="tech-tag"><i class="fa-solid fa-server"></i> Flask</span>
+              <span class="tech-tag"><i class="fa-solid fa-robot"></i> LLM</span>
+              <span class="tech-tag"><i class="fa-solid fa-eye"></i> OpenCV</span>
+              <span class="tech-tag"><i class="fa-solid fa-wave-square"></i> Whisper</span>
+              <span class="tech-tag"><i class="fa-solid fa-hand"></i> MediaPipe</span>
+              <span class="tech-tag"><i class="fa-solid fa-chart-column"></i> Pandas</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm project-modal-trigger" data-project="suvs">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Architecture Details
+              </button>
+              <a href="https://github.com/Athithyathirugnanam" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-panel reveal-on-scroll delay-1">
+            <div class="project-badge badge-creative">Visual Storytelling</div>
+            <div class="project-header">
+              <div class="project-icon-box icon-amber">
+                <i class="fa-solid fa-masks-theater"></i>
+              </div>
+              <div class="project-role-tag">Java & AI Developer</div>
+            </div>
+
+            <h3 class="project-title">AI Meme-Based Concept Explainer</h3>
+            <p class="project-summary">
+              A creative ed-tech software application that deconstructs intimidating computer science topics into digestible, 
+              humorous AI-generated memes—dramatically increasing retention through contextual visual narratives.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Generative Concept Synthesis:</strong> Formulated algorithmic pipelines to pair abstract algorithms with relatable meme templates.</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Gamified Engagement:</strong> Elevated student interaction by over 2x using visual mnemonic retention and interactive challenges.</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Cross-Functional Collaboration:</strong> Spearheaded agile development and design alignment alongside cross-disciplinary peers.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="tech-tag"><i class="fa-brands fa-java"></i> Java App Dev</span>
+              <span class="tech-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Generation</span>
+              <span class="tech-tag"><i class="fa-solid fa-palette"></i> UI Design</span>
+              <span class="tech-tag"><i class="fa-solid fa-diagram-project"></i> Agile</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm project-modal-trigger" data-project="meme">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Architecture Details
+              </button>
+              <a href="https://github.com/Athithyathirugnanam" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">CAREER MILESTONES</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Experience</span></h2>
+          <p class="section-desc">
+            A chronological timeline of hands-on industry exposure and strong academic foundations.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item 1: Internship -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker icon-marker-work">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-badge work-badge">Industry Internship</div>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> June 2026 – July 2026</span>
+              <h3>Full-Stack Web Development Intern</h3>
+              <h4 class="company-name">Kanavu Startup Village</h4>
+              <p>
+                Engaged in end-to-end web engineering within a high-velocity startup environment:
+              </p>
+              <ul class="timeline-bullets">
+                <li>Designed, developed, and tested modern responsive web pages adhering to clean UI/UX standards.</li>
+                <li>Gained comprehensive exposure to frontend state management and backend RESTful API integration.</li>
+                <li>Collaborated in live code reviews, debugging pipelines, and testing deployment cycles.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Frontend Dev</span>
+                <span>Backend Workflows</span>
+                <span>Testing & QA</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: College -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker icon-marker-edu">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-badge edu-badge">Higher Education</div>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024 – 2028</span>
+              <h3>Bachelor of Engineering (B.E.) – Computer Science & Engineering</h3>
+              <h4 class="company-name">M. Kumarasamy College of Engineering</h4>
+              <p>
+                Pursuing rigorous foundational and specialized coursework in Computer Science.
+              </p>
+              <div class="academic-stats">
+                <div class="stat-pill">
+                  <span class="stat-name">Current CGPA:</span>
+                  <span class="stat-highlight">7.5 / 10.0</span> (up to Semester III)
+                </div>
+              </div>
+              <p class="mt-2">
+                Active member in collegiate coding clubs, competitive programming batches, and hackathon incubation cells.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Higher Secondary -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker icon-marker-school">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-badge school-badge">Schooling</div>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Completed 2024</span>
+              <h3>Higher Secondary Education (Class XII)</h3>
+              <h4 class="company-name">Aanoor Vidyalaya Matric Higher Secondary School</h4>
+              <div class="academic-stats">
+                <div class="stat-pill">
+                  <span class="stat-name">Aggregate Score:</span>
+                  <span class="stat-highlight">82.66%</span>
+                </div>
+              </div>
+              <p class="mt-2">Excelled in Mathematics, Physics, Chemistry, and Computer Science fundamentals.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Secondary -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker icon-marker-school">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-badge school-badge">Schooling</div>
+              <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Completed 2022</span>
+              <h3>Secondary Education (Class X)</h3>
+              <h4 class="company-name">Aanoor Vidyalaya Matric Higher Secondary School</h4>
+              <div class="academic-stats">
+                <div class="stat-pill">
+                  <span class="stat-name">Aggregate Score:</span>
+                  <span class="stat-highlight">83.23%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">CREDENTIALS & HONORS</span>
+          <h2 class="section-title">Certifications & <span class="gradient-text">Achievements</span></h2>
+          <p class="section-desc">
+            Recognitions demonstrating technical problem solving and lifelong learning.
+          </p>
+        </div>
+
+        <div class="achievements-container">
+          <!-- Left Column: Certifications -->
+          <div class="achieve-col">
+            <h3 class="col-title reveal-on-scroll">
+              <i class="fa-solid fa-certificate"></i> Verified Certifications
+            </h3>
+
+            <div class="cert-card glass-panel reveal-on-scroll">
+              <div class="cert-icon icon-nptel"><i class="fa-solid fa-award"></i></div>
+              <div class="cert-details">
+                <h4>Cloud Computing</h4>
+                <p class="cert-issuer">NPTEL / IIT Online Certification</p>
+                <p class="cert-desc">Comprehensive study of cloud models, virtualization, storage architectures, and distributed computing services.</p>
+                <span class="cert-verified"><i class="fa-solid fa-check-circle"></i> Certified</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-panel reveal-on-scroll delay-1">
+              <div class="cert-icon icon-nptel"><i class="fa-solid fa-award"></i></div>
+              <div class="cert-details">
+                <h4>Human Computer Interaction</h4>
+                <p class="cert-issuer">NPTEL / IIT Online Certification</p>
+                <p class="cert-desc">User-centered design principles, cognitive interaction models, usability testing, and UI ergonomics.</p>
+                <span class="cert-verified"><i class="fa-solid fa-check-circle"></i> Certified</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-panel reveal-on-scroll delay-2">
+              <div class="cert-icon icon-hackerrank"><i class="fa-brands fa-hackerrank"></i></div>
+              <div class="cert-details">
+                <h4>Java Programming</h4>
+                <p class="cert-issuer">HackerRank Certification</p>
+                <p class="cert-desc">Demonstrated competency in object-oriented programming, data structures, exception handling, and core Java syntax.</p>
+                <span class="cert-verified"><i class="fa-solid fa-check-circle"></i> Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Competitive Coding & Hackathons -->
+          <div class="achieve-col">
+            <h3 class="col-title reveal-on-scroll">
+              <i class="fa-solid fa-trophy"></i> Competitive Coding & Hackathons
+            </h3>
+
+            <div class="achievement-card glass-panel reveal-on-scroll">
+              <div class="achieve-header">
+                <div class="achieve-icon icon-hr"><i class="fa-brands fa-hackerrank"></i></div>
+                <div>
+                  <h4>HackerRank Excellence</h4>
+                  <span class="achieve-badge">100+ Problems Solved</span>
+                </div>
+              </div>
+              <p>Achieved a cumulative score of <strong>7,000 points</strong> demonstrating rigorous consistency across problem solving and algorithms.</p>
+              <div class="score-display">
+                <span class="score-num">7,000</span>
+                <span class="score-label">Global Points</span>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-panel reveal-on-scroll delay-1">
+              <div class="achieve-header">
+                <div class="achieve-icon icon-lc"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <h4>LeetCode Problem Solving</h4>
+                  <span class="achieve-badge">20+ Problems Solved</span>
+                </div>
+              </div>
+              <p>Actively sharpening analytical thinking and algorithmic complexity optimizations across array manipulation, strings, and recursion.</p>
+            </div>
+
+            <div class="achievement-card glass-panel reveal-on-scroll delay-2">
+              <div class="achieve-header">
+                <div class="achieve-icon icon-nit"><i class="fa-solid fa-fire"></i></div>
+                <div>
+                  <h4>NIT Trichy Hackathon</h4>
+                  <span class="achieve-badge">August 2026</span>
+                </div>
+              </div>
+              <p>Participated in the premier national hackathon at the prestigious <strong>National Institute of Technology, Tiruchirappalli (NIT Trichy)</strong>.</p>
+            </div>
+
+            <div class="achievement-card glass-panel reveal-on-scroll delay-3">
+              <div class="achieve-header">
+                <div class="achieve-icon icon-appathon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div>
+                  <h4>Appathon @ Sri Eshwar College</h4>
+                  <span class="achieve-badge">February 2026</span>
+                </div>
+              </div>
+              <p>Participated in rapid software development Appathon at <strong>Sri Eshwar College of Engineering</strong>, prototyping dynamic application solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-subtitle">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-desc">
+            Open for internships, project collaborations, and full-stack/AI software engineering opportunities.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Cards -->
+          <div class="contact-info-panel glass-panel reveal-on-scroll">
+            <h3>Direct Channels</h3>
+            <p>Feel free to reach out via email, phone, or connect through social channels.</p>
+
+            <div class="contact-cards-list">
+              <a href="mailto:athithyathirugnanam@gmail.com" class="contact-method-card">
+                <div class="method-icon icon-email"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Email Me</span>
+                  <span class="method-value">athithyathirugnanam@gmail.com</span>
+                </div>
+                <button type="button" class="copy-btn" data-copy="athithyathirugnanam@gmail.com" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </a>
+
+              <a href="tel:+917708978227" class="contact-method-card">
+                <div class="method-icon icon-phone"><i class="fa-solid fa-phone"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Phone & Call</span>
+                  <span class="method-value">+91 77089 78227</span>
+                </div>
+                <button type="button" class="copy-btn" data-copy="+917708978227" title="Copy Phone">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </a>
+
+              <div class="contact-method-card no-link">
+                <div class="method-icon icon-location"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Tiruppur, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <a href="https://github.com/Athithyathirugnanam" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="method-icon icon-github"><i class="fa-brands fa-github"></i></div>
+                <div class="method-details">
+                  <span class="method-label">GitHub Profile</span>
+                  <span class="method-value">github.com/Athithyathirugnanam</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+              </a>
+
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="method-icon icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn Profile</span>
+                  <span class="method-value">Athithya .T</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-panel glass-panel reveal-on-scroll delay-1">
+            <h3>Send a Message</h3>
+            <p>Have an inquiry, project proposition, or internship opportunity? Drop a note below:</p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-at input-icon"></i>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Project Inquiry" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="4" placeholder="Hello Athithya, I saw your portfolio and would love to connect..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="submitBtn">
+                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                <span class="btn-loader" style="display:none;"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;A/&gt;</span>
+          <span class="logo-text">Athithya T</span>
+        </a>
+        <p>Crafting intelligent software solutions with engineering precision and modern aesthetics.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Timeline</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Athithya T. All rights reserved. Designed with passion & precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Project Details Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card glass-panel">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Resume Modal -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-card resume-modal-card glass-panel">
+      <div class="modal-header-bar">
+        <h3>Curriculum Vitae — Athithya T</h3>
+        <div class="modal-header-actions">
+          <button class="btn btn-sm btn-primary" id="printResumeBtn"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+          <button class="modal-close-btn" id="resumeCloseBtn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="resume-preview-sheet" id="resumeSheet">
+        <!-- Structured formatted resume -->
+        <header class="resume-sheet-header">
+          <div>
+            <h1>ATHITHYA T</h1>
+            <p class="resume-sheet-role">Computer Science Engineering Undergraduate | AI & Full-Stack Developer</p>
+          </div>
+          <div class="resume-sheet-contacts">
+            <p><i class="fa-solid fa-envelope"></i> athithyathirugnanam@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +91 77089 78227</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tiruppur, Tamil Nadu</p>
+            <p><i class="fa-brands fa-github"></i> github.com/Athithyathirugnanam</p>
+          </div>
+        </header>
+
+        <section class="resume-sheet-section">
+          <h2>Professional Profile</h2>
+          <p>
+            Computer Science Engineering student skilled in Java, Python, C, and Web Development. Passionate about software 
+            development, artificial intelligence, and algorithmic problem solving. Seeking high-impact internship opportunities 
+            to contribute hands-on skills and gain industry experience.
+          </p>
+        </section>
+
+        <section class="resume-sheet-section">
+          <h2>Education</h2>
+          <div class="resume-row">
+            <div>
+              <strong>Bachelor of Engineering (B.E.) – Computer Science and Engineering</strong>
+              <div class="text-muted">M. Kumarasamy College of Engineering</div>
+            </div>
+            <div class="text-right">
+              <strong>2024 – 2028</strong>
+              <div class="badge-inline">CGPA: 7.5 (up to Sem III)</div>
+            </div>
+          </div>
+          <div class="resume-row mt-1">
+            <div>
+              <strong>Higher Secondary Education (Class XII)</strong>
+              <div class="text-muted">Aanoor Vidyalaya Matric Higher Secondary School</div>
+            </div>
+            <div class="text-right">
+              <strong>2024</strong>
+              <div class="badge-inline">82.66%</div>
+            </div>
+          </div>
+          <div class="resume-row mt-1">
+            <div>
+              <strong>Secondary Education (Class X)</strong>
+              <div class="text-muted">Aanoor Vidyalaya Matric Higher Secondary School</div>
+            </div>
+            <div class="text-right">
+              <strong>2022</strong>
+              <div class="badge-inline">83.23%</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="resume-sheet-section">
+          <h2>Work Experience</h2>
+          <div class="resume-row">
+            <div>
+              <strong>Full-Stack Web Development Intern</strong>
+              <div class="text-muted">Kanavu Startup Village</div>
+            </div>
+            <div class="text-right">
+              <strong>June 2026 – July 2026</strong>
+            </div>
+          </div>
+          <ul class="resume-list">
+            <li>Learned web development concepts, responsive UI patterns, and scalable application architecture.</li>
+            <li>Developed and tested performant web pages ensuring cross-browser compatibility and speed.</li>
+            <li>Gained hands-on end-to-end exposure across frontend and backend development workflows.</li>
+          </ul>
+        </section>
+
+        <section class="resume-sheet-section">
+          <h2>Projects</h2>
+          <div class="mb-2">
+            <strong>Student Understanding Verification System</strong> | <em>Python, Flask, LLM, OpenCV, Whisper, MediaPipe, Pandas</em>
+            <ul class="resume-list">
+              <li>Engineered an AI-based system evaluating students' conceptual understanding via multimodal speech and behavioral inputs.</li>
+              <li>Used LLM-based semantic analysis to detect misconceptions and formulate tailored improvement paths.</li>
+              <li>Integrated OpenCV, Whisper, and MediaPipe to capture behavioral cues and audio telemetry.</li>
+            </ul>
+          </div>
+          <div>
+            <strong>AI Meme-Based Concept Explainer</strong> | <em>Java, AI Generation, Visual Storytelling</em>
+            <ul class="resume-list">
+              <li>Developed an ed-tech tool explaining complex technical engineering concepts using AI-generated visual memes.</li>
+              <li>Significantly increased student engagement and conceptual retention through humor and relatable visual metaphors.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="resume-sheet-section">
+          <h2>Technical & Soft Skills</h2>
+          <p><strong>Languages:</strong> Python, Java, C, HTML5, CSS3, JavaScript</p>
+          <p><strong>Libraries & Tools:</strong> Flask, OpenCV, Whisper, MediaPipe, Pandas, Git, LLM APIs</p>
+          <p><strong>Soft Skills:</strong> Teamwork, Time Management, Quick Learner, Clear Communication</p>
+          <p><strong>Certifications:</strong> Cloud Computing (NPTEL), Human Computer Interaction (NPTEL), Java Programming (HackerRank)</p>
+          <p><strong>Achievements:</strong> HackerRank (Solved 100+ problems, Score 7000) | LeetCode (20+ problems) | NIT Trichy Hackathon (Aug 2026) | Appathon @ Sri Eshwar (Feb 2026)</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
